@@ -74,7 +74,7 @@ const LoginPage = () => {
               <div className="alert">
                 <div className="alert__icon" />
                 <div className="alert__body">
-                  Nesprávný login, email nebo heslo
+                  Nesprávný login, e-mail nebo heslo
                 </div>
               </div>
             ) : null}
