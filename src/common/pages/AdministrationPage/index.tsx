@@ -16,8 +16,8 @@ const useDataList = <T extends {}>(url: string): [T[], T | null, (value: T) => v
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
-      .then((data) => {
-        setData(data);
+      .then((responseData) => {
+        setData(responseData);
       }).finally(() => {
         setLoading(false);
       });
