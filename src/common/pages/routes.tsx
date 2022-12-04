@@ -7,6 +7,7 @@ import LoginPage from './LoginPage';
 import InvitePage from './InvitePage';
 import AccountPage from './AccountPage';
 import NotFoundPage from './NotFoundPage';
+import AdministrationPage from './AdministrationPage';
 
 const routes: RouteObject[] = [
   { path: '/prihlasit', element: <LoginPage /> },
@@ -26,6 +27,7 @@ const routes: RouteObject[] = [
     element: <ExercisePage />,
   },
   { path: '/kurzy/:courseLink', element: <CoursePage /> },
+  { path: '/administrace', element: <AdministrationPage /> },
   { path: '/', element: <HomePage /> },
   { path: '*', element: <NotFoundPage /> },
 ];

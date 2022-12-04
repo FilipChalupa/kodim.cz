@@ -22,6 +22,7 @@ export const apiController = (config: any): Router => {
   api.get('/groups', async (req, res) => {
     const groups = await GroupModel.find();
     res.json(groups.map((group) => ({
+      id: group.id,
       url: `${config.serverUrl}${req.originalUrl}/${group.name}`,
       data: {
         name: group.name,
