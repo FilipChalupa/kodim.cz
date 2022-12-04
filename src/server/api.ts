@@ -40,6 +40,7 @@ export const apiController = (config: any): Router => {
     const users = await UserModel.find({ groups: group.id });
     res.json({
       ...group.toObject(),
+      invitationUrl: group.inviteToken ? `${config.serverUrl}/pozvanky/skupina/${group.inviteToken}` : undefined,
       users: users.map((user) => ({
         type: 'users',
         data: {
