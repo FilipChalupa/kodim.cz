@@ -151,6 +151,7 @@ export const apiController = (config: any): Router => {
   api.get('/users', async (req, res) => {
     const users = await UserModel.find();
     res.json(users.map((user) => ({
+      id: user.id,
       url: `${config.serverUrl}${req.originalUrl}/${user.login}`,
       data: {
         login: user.login,
